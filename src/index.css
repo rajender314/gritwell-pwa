@@ -1,0 +1,28 @@
+/*
+*Base Body Styles
+*/
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #111A1C;
+    /* overflow: hidden; */
+    -webkit-user-select: none;
+    scroll-behavior: smooth;
+    /* Safari */
+    -webkit-overflow-scrolling: touch;
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
+code {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.rbc-time-content {
+    display: none;
+}

@@ -1,0 +1,58 @@
+.date-heading{
+    background: #ffffff !important;
+    cursor: pointer;
+  }
+  .date-heading:hover{
+   background: #E8F4F3 !important;
+  color: #067356;
+  }
+  .date-heading:hover .day-of-week{
+       color: #06735680;
+  }
+  .date-heading:hover .date-secondary{
+       color: #06735680;
+  }
+  .date-heading:active .date-secondary{
+    color: #067356;
+  }
+  .date-heading:active .day-of-week{
+    color: #067356;
+  }
+  .date.activeday .date-heading{
+    background: #E8F4F3;
+    border-radius: 10px;
+  }
+  .choose-date-time .choose-time input[type=radio]+label{
+  background: #FAFAFC;
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 16px;
+  line-height: 24px;
+  }
+  .choose-date-time .choose-time input[type=radio]:checked+label{
+      background: #111A1C;
+      font-size: 16px;
+      line-height: 20px;
+      color: #ffffff;
+  }
+  .choose-date-time .choose-time input[type=radio]:checked+label:hover{
+      background: #111A1C;
+      font-size: 16px;
+      line-height: 20px;
+      color: #ffffff;
+  }
+  .choose-date-time .day-of-week{
+   font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #B8BCCA;
+  }
+  .choose-date-time .date-secondary{
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #111A1C;
+  }
+  .date-head-text{
+  color: #4f4f4f !important;
+  }

@@ -1,0 +1,30 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - nvm install $VERSION_NODE_16_PWA
+        - nvm use $VERSION_NODE_16_PWA
+        - npm install --legacy-peer-deps
+    build:
+      commands:
+        - nvm install $VERSION_NODE_16_PWA
+        - nvm use $VERSION_NODE_16_PWA
+        - echo $REACT_APP_API_URL
+        - echo "REACT_APP_API_URL=$REACT_APP_API_URL" >> .env
+        - echo "REACT_APP_SERVICE_WORKER=stage-service.worker.js" >> .env
+        - echo "REACT_APP_HOMEPAGE=/" >> .env
+        - echo "REACT_APPSTRIPE_SECRET_KEY=$REACT_APPSTRIPE_SECRET_KEY" >> .env
+        - echo "REACT_APP_STRIPE_PUBLISHABLE_KEY=$REACT_APP_STRIPE_PUBLISHABLE_KEY" >> .env        
+        - echo "REACT_APP_ASSESMENT_FORM=$REACT_APP_ASSESMENT_FORM" >> .env
+        - echo "REACT_APP_SYMPTON_FORM=$REACT_APP_SYMPTON_FORM" >> .env
+        - echo "REACT_APP_INTAKE_FORM=$REACT_APP_INTAKE_FORM" >> .env
+        - cat .env
+        - npm run build
+  artifacts:
+    baseDirectory: build
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*
